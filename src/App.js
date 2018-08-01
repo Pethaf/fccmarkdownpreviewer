@@ -14,7 +14,7 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(event){
-    let output = marked(this.state.input);
+    let output = marked(event.target.value);
     this.setState({
       input:event.target.value,
       output
