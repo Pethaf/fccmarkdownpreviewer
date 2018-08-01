@@ -16,7 +16,7 @@ html,body {
 .App {
   flex-direction: column;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 100%;
   padding: 20px 20px;
   position: fixed;
@@ -28,7 +28,12 @@ html,body {
 
 }
 
+h1,h2,h3,h4,h5,h6,.wrapper,#editor{
+  color: var(--territiary-color);
+}
+
 #editor {
+  border: none;
   box-shadow: 10px 10px 5px 0px rgba(0,88,255,0.9);
   background-color: rgba(0,0,0,0.5);
   box-sizing: border-box;
@@ -36,24 +41,30 @@ html,body {
   height: 100%;
   padding: 5px;
   overflow: auto;
-  border-radius: 5px;
-  border: 5px solid var(--territiary-color);
+  font-size: 18px;
 }
 
 #preview {
   background-color: rgba(0,0,0,0.5);
   box-shadow: 10px 10px 5px 0px rgba(0,88,255,0.9);
   box-sizing: border-box;
-  height: 100%;
+  height: auto;
   width: 100%;
   padding: 5px;
-  border-radius:5px;
   margin-bottom: 20px;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
   width: 100%;
   max-width: 960px;
+}
+
+.wrapper:last-of-type{
+  margin-bottom: 15px;
 }
 
 .wrapper h2 {
