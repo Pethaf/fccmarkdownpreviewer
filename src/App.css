@@ -3,72 +3,72 @@
   --secondary-color: rgb(255,60,25);
   --territiary-color: rgb(0,88,255);
 }
-
-html,body {
-  box-sizing: border-box;
-  height: 100%;
+body, html {
   margin: 0;
   padding: 0;
-  background-color: var(--main-color);
+  box-sizing: border-box;
+  height: 100%;
+  background-color: var(--territiary-color);
 }
-
 
 .App {
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-  min-height: 100%;
-  padding: 20px 20px;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  align-items: center;
-
-}
-
-h1,h2,h3,h4,h5,h6,.wrapper,#editor{
-  color: var(--territiary-color);
-}
-
-#editor {
-  border: none;
-  box-shadow: 10px 10px 5px 0px rgba(0,88,255,0.9);
-  background-color: rgba(0,0,0,0.5);
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  overflow: auto;
-  font-size: 18px;
-}
-
-#preview {
-  background-color: rgba(0,0,0,0.5);
-  box-shadow: 10px 10px 5px 0px rgba(0,88,255,0.9);
-  box-sizing: border-box;
-  height: auto;
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 20px;
-  overflow: auto;
-  max-height: 30vh;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: stretch;
-  width: 100%;
   max-width: 960px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
-.wrapper:last-of-type{
-  margin-bottom: 15px;
-}
 
-.wrapper h2 {
+header h1 {
   text-align: center;
+}
+
+.desc {
+  text-align: center;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#editor, #preview {
+  border: none;
+  padding: 5px;
+  width: 100%;
+  height: 5em;
+  overflow: auto;
+  box-shadow: -1px 1px 5px 9px rgba(44,117,255);
+  background-color: rgba(0,0,0,0.2);
+}
+
+@media screen and (min-width: 800px){
+ 
+    .App {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-between;;
+    }
+
+    .wrapper {
+      width: 40%;
+      display:flex;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+
+    header{
+      width: 100%;
+  }
+
+  #editor, #preview {
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
 }

@@ -7,7 +7,8 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      input:"# Cool stuff"
+      input:`# Cool stuff     
+      ## Some other cool stuff`
       ,
       output: ""
     }
@@ -21,6 +22,13 @@ class App extends Component {
     })
   }
   componentDidMount(){
+    const script = document.createElement("script");
+
+        script.src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";
+        script.async = true;
+
+        document.body.appendChild(script);
+
     this.setState({
       output: marked(this.state.input)
     })
